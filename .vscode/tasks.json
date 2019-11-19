@@ -1,0 +1,42 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "remotedbg",
+            "type":"shell",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "windows":{
+                "command": "ssh pi@192.168.1.112 \"sh -c 'python3 -m ptvsd --host 192.168.1.112 --port 3000 --wait ~/vc_camera_control/main.py; nohup ./whatever > /dev/null 2>&1 &'\""
+            },
+            "dependsOn":["publish"]
+        },
+        {
+            "label": "publish",
+            "type": "shell",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "windows": {
+                "command": "ubuntu run \"rsync -e 'ssh -i /mnt/c/Users/amavin/.ssh/id_rsa' -ruv /mnt/c/Users/amavin/source/repos/vc_camera_control/* pi@192.168.1.112:/home/pi/rsync\""
+            }
+        },
+        {
+            "label": "publish_file",
+            "type": "shell",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "windows": {
+                "command": "${workspaceRoot}/publish.bat"
+            }
+        }
+    ]
+}
