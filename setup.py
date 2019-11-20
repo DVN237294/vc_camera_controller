@@ -23,7 +23,16 @@ DESCRIPTION = "Camera controller module for the Virtual Classroom Project"
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
-REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil", "docopt"]
+REQUIRES = [
+    "urllib3 >= 1.15", 
+    "six >= 1.10", 
+    "certifi", 
+    "python-dateutil", 
+    "docopt", 
+    "schedule", 
+    "picamera",
+    "ffmpeg"
+    ]
 
 setup(
     name=NAME,
@@ -35,6 +44,11 @@ setup(
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,
+    entry_points = {
+              'console_scripts': [
+                  'vccamera = vccamera_controller.__main__:main',                  
+              ],              
+          }
 )
 
 

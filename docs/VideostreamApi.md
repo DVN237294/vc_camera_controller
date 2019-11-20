@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost:58180*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**api_videostream_post**](VideostreamApi.md#api_videostream_post) | **POST** /api/Videostream | 
+[**api_videostream_test_post**](VideostreamApi.md#api_videostream_test_post) | **POST** /api/Videostream/test | 
 [**api_videostream_ul_token_body_post**](VideostreamApi.md#api_videostream_ul_token_body_post) | **POST** /api/Videostream/{ulToken}/body | 
 [**api_videostream_ul_token_post**](VideostreamApi.md#api_videostream_ul_token_post) | **POST** /api/Videostream/{ulToken} | 
 [**api_videostream_video_id_get**](VideostreamApi.md#api_videostream_video_id_get) | **GET** /api/Videostream/{videoId} | 
@@ -59,6 +60,62 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json, text/json, application/*+json
  - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **api_videostream_test_post**
+> api_videostream_test_post(body=body)
+
+
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import openapi_client
+from openapi_client.rest import ApiException
+from pprint import pprint
+configuration = openapi_client.Configuration()
+# Configure Bearer authorization (JWT): bearer
+configuration.access_token = 'YOUR_BEARER_TOKEN'
+
+# Defining host is optional and default to http://localhost:58180
+configuration.host = "http://localhost:58180"
+# Create an instance of the API class
+api_instance = openapi_client.VideostreamApi(openapi_client.ApiClient(configuration))
+body = 'body_example' # str |  (optional)
+
+try:
+    api_instance.api_videostream_test_post(body=body)
+except ApiException as e:
+    print("Exception when calling VideostreamApi->api_videostream_test_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **str**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: video/mp4
+ - **Accept**: Not defined
 
 ### HTTP response details
 | Status code | Description | Response headers |

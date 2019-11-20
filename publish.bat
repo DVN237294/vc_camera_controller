@@ -1,3 +1,3 @@
 ssh pi@192.168.1.112 "sudo pkill -f python3"
-ubuntu run "rsync -e 'ssh -i /mnt/c/Users/amavin/.ssh/id_rsa' -ruv /mnt/c/Users/amavin/source/repos/vc_camera_control pi@192.168.1.112:/home/pi/"
-ssh pi@192.168.1.112 "sudo nohup sh -c 'cd /home/pi/vc_camera_control; python3 -m ptvsd --host 192.168.1.112 --port 3000 --wait /home/pi/vc_camera_control/main.py \"F.301a UV\" teststudent bpr2019 > /dev/null &'; sleep 6"
+ubuntu run "rsync -e 'ssh -i /mnt/c/Users/amavin/.ssh/id_rsa' -ruv /mnt/c/Users/amavin/source/repos/vc_camera_controller pi@192.168.1.112:/home/pi/"
+ssh pi@192.168.1.112 "sudo nohup sh -c 'cd /home/pi/vc_camera_controller; python3 -m ptvsd --host 192.168.1.112 --port 3000 --wait /home/pi/vc_camera_controller/vccamera_controller/__main__.py teststudent bpr2019 -vvv --record-now 10 > /dev/null &'; sleep 6"
