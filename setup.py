@@ -46,7 +46,7 @@ setup(
     include_package_data=True,
     entry_points = {
               'console_scripts': [
-                  'vccamera = vccamera_controller.__main__:main',                  
+                  'vccamera = vccamera.__main__:main',                  
               ],              
           }
 )

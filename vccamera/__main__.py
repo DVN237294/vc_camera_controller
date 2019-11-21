@@ -2,7 +2,7 @@
     Vc Camera Controller. Camera controller service for Virtual Classroom Project
 
 Usage:
-    vccamera <vc_username> <vc_password> [-v...] [options]
+    vccamera <vc_username> <vc_password> [-h] [-v...] [options]
 
 Options:
     -h, --help                          Print this help text
@@ -156,7 +156,9 @@ class VcCameraController:
             self._log.exception("Exception when calling AuthenticationApi->api_authentication_post: %s\n" % e)
 
 
+# When run as console script through setup.py entry_point:
 def main():
     VcCameraController().main()
 
-#VcCameraController().main()
+# When run as script with python -m:
+VcCameraController().main() 
