@@ -36,6 +36,7 @@ class User(object):
         'user_name': 'str',
         'full_name': 'str',
         'email': 'str',
+        'is_teacher': 'bool',
         'comments': 'list[Comment]'
     }
 
@@ -44,16 +45,18 @@ class User(object):
         'user_name': 'userName',
         'full_name': 'fullName',
         'email': 'email',
+        'is_teacher': 'isTeacher',
         'comments': 'comments'
     }
 
-    def __init__(self, id=None, user_name=None, full_name=None, email=None, comments=None):  # noqa: E501
+    def __init__(self, id=None, user_name=None, full_name=None, email=None, is_teacher=None, comments=None):  # noqa: E501
         """User - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
         self._user_name = None
         self._full_name = None
         self._email = None
+        self._is_teacher = None
         self._comments = None
         self.discriminator = None
 
@@ -62,6 +65,8 @@ class User(object):
         self.user_name = user_name
         self.full_name = full_name
         self.email = email
+        if is_teacher is not None:
+            self.is_teacher = is_teacher
         self.comments = comments
 
     @property
@@ -147,6 +152,27 @@ class User(object):
         """
 
         self._email = email
+
+    @property
+    def is_teacher(self):
+        """Gets the is_teacher of this User.  # noqa: E501
+
+
+        :return: The is_teacher of this User.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_teacher
+
+    @is_teacher.setter
+    def is_teacher(self, is_teacher):
+        """Sets the is_teacher of this User.
+
+
+        :param is_teacher: The is_teacher of this User.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_teacher = is_teacher
 
     @property
     def comments(self):

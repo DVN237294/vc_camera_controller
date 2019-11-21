@@ -50,7 +50,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
     :param password: Password for HTTP basic authentication
     """
 
-    def __init__(self, host="http://localhost:58180",
+    def __init__(self, host="http://localhost",
                  api_key={}, api_key_prefix={},
                  username="", password=""):
         """Constructor
@@ -285,7 +285,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         """
         return [
             {
-                'url': "http://localhost:58180",
+                'url': "/",
                 'description': "No description provided",
             }
         ]

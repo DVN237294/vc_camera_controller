@@ -1,6 +1,6 @@
 # openapi_client.ScheduleApi
 
-All URIs are relative to *http://localhost:58180*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -28,8 +28,8 @@ configuration = openapi_client.Configuration()
 # Configure Bearer authorization (JWT): bearer
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to http://localhost:58180
-configuration.host = "http://localhost:58180"
+# Defining host is optional and default to http://localhost
+configuration.host = "http://localhost"
 # Create an instance of the API class
 api_instance = openapi_client.ScheduleApi(openapi_client.ApiClient(configuration))
 room = openapi_client.Room() # Room |  (optional)
@@ -85,8 +85,8 @@ configuration = openapi_client.Configuration()
 # Configure Bearer authorization (JWT): bearer
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to http://localhost:58180
-configuration.host = "http://localhost:58180"
+# Defining host is optional and default to http://localhost
+configuration.host = "http://localhost"
 # Create an instance of the API class
 api_instance = openapi_client.ScheduleApi(openapi_client.ApiClient(configuration))
 room_name = 'room_name_example' # str | 
@@ -146,8 +146,8 @@ configuration = openapi_client.Configuration()
 # Configure Bearer authorization (JWT): bearer
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to http://localhost:58180
-configuration.host = "http://localhost:58180"
+# Defining host is optional and default to http://localhost
+configuration.host = "http://localhost"
 # Create an instance of the API class
 api_instance = openapi_client.ScheduleApi(openapi_client.ApiClient(configuration))
 limit = 0 # int |  (optional) (default to 0)
@@ -203,8 +203,8 @@ configuration = openapi_client.Configuration()
 # Configure Bearer authorization (JWT): bearer
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to http://localhost:58180
-configuration.host = "http://localhost:58180"
+# Defining host is optional and default to http://localhost
+configuration.host = "http://localhost"
 # Create an instance of the API class
 api_instance = openapi_client.ScheduleApi(openapi_client.ApiClient(configuration))
 scheduled_session = [openapi_client.ScheduledSession()] # list[ScheduledSession] |  (optional)

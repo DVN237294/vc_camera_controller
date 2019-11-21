@@ -16,7 +16,7 @@ Operations:
 
 Config:
     --mem-buffer-size <value>           Set the size of the memory buffer, in bytes, when recording [default: 536870912]
-    --api-url <url>                     Url of the api to use [default: vc-api.amavin.dk]
+    --api-url <url>                     Url of the api to use [default: https://vc-api.amavin.dk]
     --no-verify-certs                   Disables certificate validation of the https api endpoint 
 """
 import logging

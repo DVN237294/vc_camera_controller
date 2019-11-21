@@ -1,6 +1,6 @@
 # openapi_client.AuthenticationApi
 
-All URIs are relative to *http://localhost:58180*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -26,8 +26,8 @@ configuration = openapi_client.Configuration()
 # Configure Bearer authorization (JWT): bearer
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to http://localhost:58180
-configuration.host = "http://localhost:58180"
+# Defining host is optional and default to http://localhost
+configuration.host = "http://localhost"
 # Create an instance of the API class
 api_instance = openapi_client.AuthenticationApi(openapi_client.ApiClient(configuration))
 login_model = openapi_client.LoginModel() # LoginModel |  (optional)
@@ -83,8 +83,8 @@ configuration = openapi_client.Configuration()
 # Configure Bearer authorization (JWT): bearer
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to http://localhost:58180
-configuration.host = "http://localhost:58180"
+# Defining host is optional and default to http://localhost
+configuration.host = "http://localhost"
 # Create an instance of the API class
 api_instance = openapi_client.AuthenticationApi(openapi_client.ApiClient(configuration))
 user_signup_model = openapi_client.UserSignupModel() # UserSignupModel |  (optional)
